@@ -26,7 +26,7 @@ def passiveStudy(theList):					#Shows the kana and you type the pronunciation.
 			wrong.append(theList[i])
 
 def activeStudy(theList):					#Shows the pronunciation and you write the kana on a piece of paper.
-	print("Write the pronunciation on a paper, if it's correct press enter. Otherwise type something and then press enter.\n")
+	print("Write the kana on a paper, if it's correct press enter. Otherwise type something and then press enter.\n")
 	for i in range(len(theList)):
 		a=input(theList[i][1])
 		a=input(theList[i][0]+'\n')
@@ -37,7 +37,7 @@ def activeStudy(theList):					#Shows the pronunciation and you write the kana on
 def getKanaType():							#Asks the user if he wants to study hiragana or katakana. He types h or k.
 	valid=False
 	while not valid:
-		kanaType=input('Hey there. Wanna study hiragana or katakana? k/h:')
+		kanaType=input('Hey there. Wanna study hiragana or katakana? h/k:')
 		if kanaType=='h' or kanaType=='k':
 			valid=True
 	return kanaType
@@ -50,7 +50,7 @@ def getStudyType():							#Asks the user if he wants to study actively or passiv
 			valid=True
 	return studyType
 
-def study(studyType):						#Starts the stusy session.
+def study(studyType):						#Starts the study session.
 	if studyType=='a':
 		activeStudy(theList)
 	elif studyType=='p':
